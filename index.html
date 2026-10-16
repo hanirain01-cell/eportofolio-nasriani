@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>E-Portfolio Seminar PPG | PPG Calon Guru 2026</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Caveat:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ================= LOADER ================= https://3dkitchen-mauve.vercel.app/ -->
+<div class="loader" id="loader">
+  <div class="loader-book">
+    <i class="fa-solid fa-hat-chef"></i>
+  </div>
+  <p>Menyiapkan portfolio<span class="dots"><span>.</span><span>.</span><span>.</span></span></p>
+</div>
+
+<!-- ================= PROGRESS BAR ================= -->
+<div class="scroll-progress" id="scrollProgress"></div>
+
+<!-- ================= MOBILE OVERLAY ================= -->
+<div class="mobile-overlay" id="mobileOverlay"></div>
+
+<!-- ================= TOP NAVBAR ================= -->
+<nav class="topbar" id="sidebar">
+  <div class="topbar-brand">
+    <div class="brand-mark"><img src="assets/logo-chef.png" alt="Logo Topi Chef"></div>
+    <div class="brand-text">
+      <span class="brand-title">E-Portfolio</span>
+      <span class="brand-sub">Nasriani, S.Pd.</span>
+    </div>
+  </div>
+
+  <div class="topbar-nav">
+    <a href="#beranda" class="nav-link active" data-section="beranda">
+      <i class="fa-solid fa-house"></i><span>Beranda</span>
+    </a>
+    <a href="#profil" class="nav-link" data-section="profil">
+      <i class="fa-solid fa-user"></i><span>Profil</span>
+    </a>
+    <div class="nav-dropdown">
+      <a href="#rancangan" class="nav-link dropdown-toggle" data-section="rancangan,pengalaman-s1,pengalaman-s2">
+        <i class="fa-solid fa-route"></i><span>Learning Journey</span><i class="fa-solid fa-chevron-down nav-caret"></i>
+      </a>
+      <div class="nav-submenu">
+        <a href="#pengalaman-s1" class="nav-link sub-link" data-section="pengalaman-s1"><span>Pengalaman Belajar SEM 1</span></a>
+        <a href="#pengalaman-s2" class="nav-link sub-link" data-section="pengalaman-s2"><span>Pengalaman Belajar SEM 2</span></a>
+      </div>
+    </div>
+    <a href="#karya-inovatif" class="nav-link" data-section="karya-inovatif">
+      <i class="fa-solid fa-lightbulb"></i><span>Karya Inovasi</span>
+    </a>
+    <div class="nav-dropdown">
+      <a href="#refleksi" class="nav-link dropdown-toggle" data-section="refleksi,refleksi-s1,refleksi-s2">
+        <i class="fa-solid fa-book"></i><span>Refleksi PPG</span><i class="fa-solid fa-chevron-down nav-caret"></i>
+      </a>
+      <div class="nav-submenu" id="refleksiSubmenu">
+        <a href="#refleksi-s1" class="nav-link sub-link" data-section="refleksi-s1"><span>Refleksi Semester 1</span></a>
+        <a href="#refleksi-s2" class="nav-link sub-link" data-section="refleksi-s2"><span>Refleksi Semester 2</span></a>
+        <a href="#refleksi" class="nav-link sub-link" data-section="refleksi"><span>Refleksi Kegiatan PPG</span></a>
+      </div>
+    </div>
+    
+    <a href="#dokumentasi" class="nav-link" data-section="dokumentasi">
+      <i class="fa-solid fa-images"></i><span>Dokumentasi</span>
+    </a>
+  </div>
+
+  <button class="topbar-toggle" id="topbarToggle" aria-label="Menu" aria-expanded="false">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <div class="topbar-actions">
+    <button class="theme-toggle" id="themeToggle" title="Mode Gelap">
+      <i class="fa-solid fa-moon"></i>
+    </button>
+    <div class="header-photo">
+      <img src="assets/dokumen/foto-profil.jpg" alt="Foto Avatar Guru">
+    </div>
+  </div>
+</nav>
+
+<!-- ================= MAIN ================= -->
+<div class="main-wrapper" id="mainWrapper">
+
+  <!-- ================= CONTENT ================= -->
+  <main class="content">
+
+    <!-- ============ HERO / BERANDA ============ -->
+    <section id="beranda" class="page section hero-screensaver page-active">
+      <div class="ss-background" id="ssBackground"></div>
+      <div class="ss-overlay"></div>
+      <div class="hero-screensaver-inner" data-aos="zoom-in">
+        <div class="hero-icon-badge">
+          <img src="assets/logo-chef.png" alt="Logo Topi Chef">
+        </div>
+        <h1 class="hero-screensaver-title">E-PORTOFOLIO SEMINAR PENDIDIKAN PROFESI GURU</h1>
+        <div class="hero-divider">
+          <span class="divider-line"></span>
+          <span class="divider-icon"><i class="fa-solid fa-star"></i></span>
+          <span class="divider-line"></span>
+        </div>
+        <p class="hero-screensaver-name">Nasriani, S.Pd.</p>
+        <p class="hero-screensaver-nim">2590494950035</p>
+      </div>
+    </section>
+
+    <!-- ============ PROFIL GURU ============ -->
+    <section id="profil" class="page section">
+      <div class="page-banner" data-aos="fade-up" style="background-image:url('assets/media/banner-profil.jpg');">
+        <h1>Profil Guru</h1>
+        <p>Mengenal lebih dekat tentang diri saya sebagai calon guru profesional.</p>
+      </div>
+
+      <div class="two-col">
+
+        <div class="card profil-card">
+          <div class="profil-photo" data-aos="zoom-in">
+            <img src="assets/dokumen/foto-profil.jpg" alt="Foto Avatar Guru">
+          </div>
+          <div class="profil-detail" data-aos="fade-left">
+            <dl class="detail-list">
+              <div class="detail-row"><dt><i class="fa-solid fa-id-badge"></i> Nama</dt><dd>Nasriani, S.Pd.</dd></div>
+              <div class="detail-row"><dt><i class="fa-solid fa-hashtag"></i> NIM</dt><dd>2590494950035</dd></div>
+              <div class="detail-row"><dt><i class="fa-solid fa-graduation-cap"></i> Bidang Studi</dt><dd>Kuliner</dd></div>
+              <div class="detail-row"><dt><i class="fa-solid fa-building-columns"></i> Universitas</dt><dd>Universitas Negeri Makassar</dd></div>
+              <div class="detail-row"><dt><i class="fa-solid fa-calendar-days"></i> Angkatan</dt><dd>2026</dd></div>
+              <div class="detail-row"><dt><i class="fa-solid fa-school"></i> Sekolah Mitra</dt><dd>SMKN 6 Makassar</dd></div>
+              <div class="detail-row"><dt><i class="fa-solid fa-user-tie"></i> Dosen Pembimbing</dt><dd>Dr. Slamet Widodo, S.Pd., M.Kes.</dd></div>
+              <div class="detail-row"><dt><i class="fa-solid fa-chalkboard-user"></i> Guru Pamong</dt><dd>Mardiana Mandeha, S.Pd.</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <!-- ===== TENTANG SAYA ===== -->
+        <div class="card" data-aos="fade-up">
+          <h3 class="block-title"><i class="fa-solid fa-user-graduate"></i> Tentang Saya</h3>
+          <p class="block-text" style="text-align:justify">Saya Nasriani, yang akrab disapa Ani, seorang perempuan yang lahir tepat pada Hari Radio beberapa tahun silam. Sebagai anak sulung dari tiga bersaudara, saya tumbuh dengan kecintaan pada membaca, mendaki, dan menjelajah alam. Rasa ingin tahu yang tinggi membuat saya selalu antusias mempelajari hal-hal baru. Semangat ini kian berkobar saat saya melangkah sebagai mahasiswa PPG Calon Guru.</p>
+          <p class="block-text" style="text-align:justify;margin-top:16px;">Pengalaman mengabdi di sebuah SMKN di Kabupaten Bone menjadi titik balik yang berharga. Perjalanan tersebut terus mengingatkan saya pada sosok guru seperti apa saya di masa lalu, sekaligus menyadarkan bahwa masih banyak kekurangan yang harus saya benahi untuk menjadi pendidik yang lebih baik.</p>
+          <blockquote class="quote-card">
+            <i class="fa-solid fa-quote-left"></i>
+            <p>Jadilah berbeda untuk di kenang, karena berbeda itu indah.</p>
+          </blockquote>
+        </div>
+
+      </div>
+
+      <!-- ===== IDENTIFIKASI DIRI ===== -->
+      <div class="card" data-aos="fade-up">
+        <h3 class="block-title"><i class="fa-solid fa-id-card"></i> Identifikasi Diri</h3>
+        <div class="analysis-grid">
+          <div class="analysis-item">
+            <h4><i class="fa-solid fa-flag"></i> Visi Pendidikan Indonesia</h4>
+            <p style="text-align:justify">Mewujudkan pemerataan akses pendidikan di Indonesia, di mana setiap anak, baik yang berada di wilayah perkotaan maupun daerah terpencil, memperoleh kesempatan yang setara dalam mengakses pendidikan yang bermutu.</p>
+          </div>
+          <div class="analysis-item">
+            <h4><i class="fa-solid fa-eye"></i> Visi Menjadi Guru</h4>
+            <p style="text-align:justify">Pendidik yang mampu membangkitkan semangat belajar murid, sehingga mereka menikmati proses belajar, bukan sekadar menjalankannya sebagai kewajiban. Berkomitmen menumbuhkan keberanian dan rasa percaya diri murid untuk berani mencoba, berani bertanya, dan berani belajar dari kegagalan. Menciptakan kelas yang adil dan setara bagi semua murid, serta membangun kedekatan emosional yang membuat mereka merasa diterima apa adanya.</p>
+          </div>
+          <div class="analysis-item">
+            <h4><i class="fa-solid fa-bullseye"></i> Strategi Pencapaian Visi</h4>
+            <ol class="misi-list">
+              <li><strong>Pembelajaran Berpusat pada Murid</strong> — Asesmen Diagnostik &amp; Pembelajaran Berdiferensiasi: Memetakan minat, bakat, dan kesiapan vokasi murid sejak awal untuk mengarahkan jalur keahlian yang presisi sesuai potensi masing-masing.</li>
+              <li><strong>Inovasi Pembelajaran &amp; Penyelarasan Kurikulum DUDI</strong> — Mengembangkan modul ajar interaktif berbasis software/alat standar industri serta memanfaatkan platform digital untuk menghadirkan pembelajaran yang kontekstual dan up-to-date.</li>
+            </ol>
+            <button class="btn btn-primary mgj-toggle" data-target="spvMore" type="button" style="margin-top:14px;"><i class="fa-solid fa-chevron-down"></i> Baca Selanjutnya</button>
+            <div id="spvMore" class="mgj-more" style="display:none;">
+              <ol class="misi-list" start="3">
+                <li><strong>Penguatan Keterampilan Abad ke-21 &amp; Kesiapan Kerja</strong> — Penerapan Project/Problem-Based Learning (PjBL) &amp; Teaching Factory: Melatih berpikir kritis, kreativitas, dan kolaborasi murid melalui pengerjaan proyek riil yang menyerupai standar kerja di industri.</li>
+                <li><strong>Pembentukan Karakter Industri &amp; Jiwa Kewirausahaan</strong> — Menanamkan disiplin, K3, tanggung jawab, dan kemandirian melalui simulasi budaya kerja industri serta proyek unit usaha/kewirausahaan siswa.</li>
+                <li><strong>Evaluasi Berkelanjutan &amp; Umpan Balik Kinerja</strong> — Asesmen Kompetensi &amp; Refleksi Berkala: Menyelenggarakan penilaian berbasis produk/portofolio nyata dan refleksi rutin untuk mengukur kesiapan kerja murid serta menyempurnakan metode ajar.</li>
+                <li><strong>Pengembangan Diri &amp; Penguatan Up-skilling Guru</strong> — Magang Industri &amp; Sertifikasi Kompetensi: Aktif mengikuti program magang di DUDI, pelatihan teknologi terbaru, dan sertifikasi profesi agar tetap menjadi pendidik yang profesional, adaptif, dan inspiratif.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+<!-- ============ LEARNING JOURNEY ============ -->
+    <section id="rancangan" class="page section">
+      <div class="page-banner gradient" data-aos="fade-up">
+        <h1>Learning Journey</h1>
+        <p>Timeline perjalanan belajar dan refleksi mendalam selama mengikuti PPG.</p>
+      </div>
+
+      <div class="card" data-aos="fade-up" style="margin-bottom:26px;">
+        <h3 class="block-title"><i class="fa-solid fa-route"></i> Pengalaman Belajar</h3>
+        <p class="block-text" style="text-align:justify">Perjalanan saya sebagai mahasiswa PPG Calon Guru merupakan proses yang membawa saya untuk terus belajar, memahami, mencoba, merefleksikan, dan berkembang. Setiap pengalaman yang saya lalui memberikan pemahaman baru tentang pendidikan dan perlahan membentuk cara pandang saya sebagai calon guru.</p>
+
+        <h4 class="lej-trans-title"><i class="fa-solid fa-arrows-spin"></i> PERUBAHAN DALAM DIRI SAYA</h4>
+        <ol class="trans-flow">
+          <li><strong>Memahami</strong><span>Memahami hakikat pendidikan dan nilai yang harus dibangun.</span></li>
+          <li><strong>Mengenal</strong><span>Memahami karakteristik, kebutuhan, dan potensi peserta didik.</span></li>
+          <li><strong>Memahami Masalah</strong><span>Belajar melihat kebutuhan dan menemukan solusi melalui Design Thinking.</span></li>
+          <li><strong>Merancang</strong><span>Menciptakan pembelajaran yang mendalam, bermakna, dan sesuai kebutuhan murid.</span></li>
+          <li><strong>Menerapkan</strong><span>Membawa pengetahuan dan rancangan ke dalam praktik melalui PPL.</span></li>
+          <li><strong>Bertumbuh</strong><span>Belajar dari tantangan, kesalahan, pengalaman, dan umpan balik.</span></li>
+          <li class="trans-final"><strong>Menjadi</strong><span>Terus berkembang menjadi guru yang reflektif, empatik, adaptif, kreatif, dan berpusat pada murid.</span></li>
+        </ol>
+
+        <h4 class="lej-trans-title"><i class="fa-solid fa-rotate"></i> Refleksi Akhir</h4>
+        <p class="block-text" style="text-align:justify">Ketika melihat kembali seluruh perjalanan belajar ini, saya menyadari bahwa setiap pengalaman memiliki keterkaitan. Filosofi Pendidikan membantu saya memahami mengapa pendidikan penting. Peserta Didik dan Pemahamannya mengajarkan saya siapa yang saya ajar. Design Thinking mengajarkan saya bagaimana memahami kebutuhan dan masalah sebelum menciptakan solusi. Pembelajaran Mendalam dan Asesmen membantu saya merancang pengalaman belajar yang bermakna. PPL Terbimbing memberikan kesempatan untuk menerapkannya dalam situasi nyata, sedangkan Pola Pikir Bertumbuh mengajarkan saya untuk terus belajar dari setiap proses.</p>
+        <p class="block-text" style="text-align:justify;margin-top:12px;">Perjalanan ini mengubah cara saya memandang profesi guru. Saya semakin memahami bahwa guru bukan hanya seseorang yang menguasai materi dan berdiri di depan kelas, tetapi seorang pembelajar sepanjang hayat yang terus memahami murid, merancang pembelajaran, menerima umpan balik, dan melakukan perbaikan.</p>
+<p class="block-text" style="text-align:justify;margin-top:12px;">Sebagai calon guru Kuliner, saya ingin menghadirkan pembelajaran yang tidak hanya mengembangkan keterampilan, tetapi juga menumbuhkan kreativitas, tanggung jawab, kerja sama, kedisiplinan, dan kepercayaan diri peserta didik.</p>
+        <p class="block-text" style="text-align:justify;margin-top:12px;font-weight:600;color:var(--primary-dark);">Perjalanan saya belum selesai.</p>
+      </div>
+    </section>
+
+    <!-- ============ PENGALAMAN BELAJAR SEM 1 ============ -->
+    <section id="pengalaman-s1" class="page section">
+      <div class="page-banner gradient-ctg" data-aos="fade-up">
+        <h1>Pengalaman Belajar SEM 1</h1>
+        <p>Refleksi mendalam atas perjalanan belajar pada semester pertama PPG.</p>
+      </div>
+
+      <div class="card" data-aos="fade-up" style="margin-bottom:26px;">
+        <img src="assets/galeri/mgj-s1.png" alt="Ilustrasi Perjalanan Transformasi" style="width:100%;height:auto;border-radius:14px;margin-bottom:18px;">
+
+        <h4 class="lej-trans-title"><i class="fa-solid fa-arrows-spin"></i> My Growth Journey</h4>
+        <h4 class="block-title lej-phase-title"><i class="fa-solid fa-seedling"></i> Perjalanan Transformasi dan Perkembangan Diri Selama Semester 1</h4>
+        <p class="block-text" style="text-align:justify">Semester pertama dalam Pendidikan Profesi Guru (PPG) menjadi perjalanan yang banyak mengubah cara pandang saya sebagai calon guru. Dari berbagai mata kuliah dan pengalaman PPL, <strong>Pemahaman Peserta Didik</strong> menjadi salah satu yang paling berkesan karena mengajarkan saya untuk melihat murid dari sudut pandang yang berbeda. Saya memahami bahwa setiap murid memiliki karakter, kebutuhan, kemampuan, dan kondisi yang berbeda. Perbedaan tersebut bukan alasan untuk membedakan perhatian, tetapi menjadi alasan bagi guru untuk lebih peka terhadap kebutuhan mereka. Saya semakin menyadari bahwa setiap murid memiliki hak yang sama untuk diperhatikan, mendapatkan ilmu, didukung untuk berkembang, dan merasa nyaman berada di kelas.</p>
+        <blockquote class="quote-card">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>Jika kamu berhenti di kegagalanmu yang kedua, maka kamu tidak akan tahu bahwa kamu berhasil di percobaanmu yang ketiga.</p>
+        </blockquote>
+        <button class="btn btn-primary mgj-toggle" data-target="mgjS1Next" type="button" style="margin-top:18px;"><i class="fa-solid fa-chevron-down"></i> Baca Selanjutnya</button>
+
+        <div id="mgjS1Next" style="display:none;">
+          <p class="block-text" style="text-align:justify;margin-top:16px;">Pengalaman PPL semakin menguatkan pemahaman tersebut. Saya melihat bahwa tidak semua murid memiliki motivasi dan kesiapan belajar yang sama. Ada yang aktif dan cepat memahami materi, tetapi ada pula yang diam, kurang percaya diri, takut mencoba, atau kehilangan semangat belajar. Dari sini saya belajar bahwa tugas guru bukan hanya menyampaikan materi, tetapi juga <strong>menumbuhkan dan mengembalikan motivasi belajar murid</strong>. Ketika seorang murid berbeda dari teman-temannya, bukan berarti ia tidak mampu, tetapi mungkin membutuhkan pendekatan, waktu, dan dukungan yang berbeda. Saya ingin menjadi guru yang tidak mudah memberikan label kepada murid, tetapi terus memberikan kesempatan kepada mereka untuk mencoba, berkembang, dan menemukan kemampuan dirinya. Bagi saya, pembelajaran yang baik bukan hanya ketika materi tersampaikan, tetapi ketika murid merasa <strong>dilihat, dihargai, diperhatikan, dan memiliki kesempatan untuk berkembang</strong>.</p>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ PENGALAMAN BELAJAR SEM 2 ============ -->
+    <section id="pengalaman-s2" class="page section">
+      <div class="page-banner gradient-sage" data-aos="fade-up">
+        <h1>Pengalaman Belajar SEM 2</h1>
+        <p>Refleksi mendalam atas perjalanan belajar pada semester kedua PPG.</p>
+      </div>
+
+      <div class="card" data-aos="fade-up" style="margin-bottom:26px;">
+        <img src="assets/galeri/mgj-s2.png" alt="Ilustrasi Perjalanan Transformasi Semester 2" style="width:100%;height:auto;border-radius:14px;margin-bottom:18px;">
+
+        <h4 class="lej-trans-title"><i class="fa-solid fa-arrows-spin"></i> My Growth Journey</h4>
+        <h4 class="block-title lej-phase-title"><i class="fa-solid fa-seedling"></i> Perjalanan Transformasi dan Perkembangan Diri Selama Semester 2</h4>
+                <p class="block-text" style="text-align:justify">Pada semester 2, salah satu mata kuliah yang paling relevan dengan pengalaman saya selama melaksanakan PPL Mandiri adalah Pembelajaran Sosial Emosional (PSE). Relevansi tersebut semakin saya rasakan ketika saya mengajar di kelas XI Kuliner 1 yang di dalamnya terdapat beberapa murid berkebutuhan khusus. Pada awalnya, saya menyadari bahwa setiap murid memiliki cara belajar, kemampuan, dan respons yang berbeda terhadap pembelajaran. Ada murid yang dapat mengikuti instruksi dengan cepat, tetapi ada pula yang membutuhkan penjelasan berulang, pendampingan, atau waktu yang lebih panjang untuk menyelesaikan tugas. Pengalaman tersebut perlahan mengubah cara pandang saya sebagai calon guru. Saya belajar bahwa memberikan perlakuan yang sama kepada semua murid tidak selalu berarti memberikan pembelajaran dengan cara yang sama. Justru, keadilan dalam pembelajaran adalah ketika setiap murid mendapatkan kesempatan dan dukungan yang sesuai dengan kebutuhannya untuk dapat berkembang. Di sinilah saya merasakan bahwa PSE bukan hanya teori yang dipelajari di bangku perkuliahan, tetapi sesuatu yang benar-benar saya butuhkan ketika berhadapan dengan murid secara langsung.</p>
+        <blockquote class="quote-card">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>Menjadi guru bukan hanya tentang memahami apa yang harus diajarkan, tetapi juga memahami siapa yang sedang kita ajar. Karena setiap siswa datang ke kelas dengan kemampuan, kebutuhan, emosi, dan cerita yang berbeda.</p>
+        </blockquote>
+        <button class="btn btn-primary mgj-toggle" data-target="mgjMore2" type="button" style="margin-top:18px;"><i class="fa-solid fa-chevron-down"></i> Baca Selanjutnya</button>
+
+        <div class="two-col" style="margin-top:22px;">
+          <div class="card video-slot">
+            <h4 class="block-title"><i class="fa-solid fa-circle-play"></i> Video 1 &mdash; Praktik Mengajar</h4>
+            <video controls preload="metadata" playsinline></video>
+            <div class="video-upload">
+              <span>Upload Video</span>
+              <input type="file" accept="video/*">
+              <p class="video-hint">Pilih file video dari perangkat ini, lalu klik tombol putar.</p>
+            </div>
+          </div>
+          <div class="card video-slot">
+            <h4 class="block-title"><i class="fa-solid fa-circle-play"></i> Video 2 &mdash; Refleksi Belajar</h4>
+            <video controls preload="metadata" playsinline></video>
+            <div class="video-upload">
+              <span>Upload Video</span>
+              <input type="file" accept="video/*">
+              <p class="video-hint">Pilih file video dari perangkat ini, lalu klik tombol putar.</p>
+            </div>
+          </div>
+        </div>
+
+        <div id="mgjMore2" class="mgj-more" style="display:none;">
+          <p class="block-text" style="text-align:justify;margin-top:16px;">Pengalaman di kelas tersebut juga membuat saya semakin memahami makna lima kompetensi CASEL, yaitu self-awareness, self-management, social awareness, relationship skills, dan responsible decision-making. Saya belajar mengenali emosi diri ketika pembelajaran tidak berjalan sesuai dengan rencana, terutama ketika harus menghadapi perbedaan kemampuan dan karakter murid dalam satu kelas. Saya belajar menahan keinginan untuk segera menilai atau menyimpulkan perilaku murid, kemudian mencoba memahami apa yang sebenarnya mereka butuhkan. Saya juga berusaha membangun hubungan yang membuat murid merasa diterima dan tidak berbeda hanya karena memiliki kebutuhan belajar yang berbeda. Dari konsep EMC2, terutama empati dan compassion, saya semakin memahami bahwa guru harus menjadi teladan dalam memperlakukan setiap murid dengan manusiawi. Saya belajar bahwa terkadang hal sederhana seperti mendengarkan dengan sabar, memberikan kesempatan untuk mencoba kembali, menggunakan bahasa yang lebih lembut, atau memberikan apresiasi atas usaha murid dapat memberikan makna yang besar bagi mereka. Pengalaman ini membuat saya menyadari bahwa sebelum mengajarkan murid untuk mengelola emosi dan menghargai orang lain, saya terlebih dahulu harus menunjukkan contoh tersebut melalui sikap saya sebagai guru.</p>
+          <p class="block-text" style="text-align:justify;margin-top:16px;">Jika saya melihat kembali pengalaman tersebut melalui pendekatan experiential learning, saya menyadari bahwa PPL Mandiri menjadi ruang belajar yang sangat berharga bagi saya. Saya tidak hanya mempelajari PSE melalui materi perkuliahan, tetapi mengalaminya secara langsung, merefleksikan apa yang terjadi di kelas, kemudian mencoba memperbaiki cara saya menghadapi situasi berikutnya. Ada pengalaman yang awalnya membuat saya bingung, tetapi setelah direfleksikan justru memberikan pemahaman baru tentang bagaimana seharusnya saya bersikap sebagai seorang guru. Dari sana saya belajar bahwa menjadi guru profesional bukan berarti selalu mengetahui semua jawaban atau selalu mampu mengendalikan setiap keadaan, tetapi memiliki kemauan untuk terus belajar dari pengalaman dan memperbaiki diri. Setelah menyelesaikan semester 2, saya semakin yakin bahwa tugas guru bukan hanya membuat murid memahami materi, tetapi juga membuat mereka merasa dilihat, dihargai, dan memiliki kesempatan untuk berkembang. Pengalaman bersama murid-murid XI Kuliner 1 menjadi pengingat bagi saya bahwa setiap murid datang ke kelas dengan cerita dan kebutuhannya masing-masing, dan tugas saya sebagai guru adalah hadir untuk membantu mereka menemukan kemampuan terbaik dalam dirinya.</p>
+        </div>
+
+      </div>
+    </section>
+<!-- ============ KARYA INOVATIF ============ -->
+<section id="karya-inovatif" class="page section">
+  <div class="page-banner gradient-ctg" data-aos="fade-up">
+    <h1>Karya Inovasi: 3D Kitchen</h1>
+    <p>Demo interaktif aplikasi 3D Kitchen yang dikembangkan sebagai media pembelajaran yang kreatif dan bermakna.</p>
+  </div>
+
+  <div class="card" data-aos="fade-up">
+    <p class="block-text">
+      Aplikasi <strong>3D Kitchen</strong> merupakan karya inovatif berupa media ajar interaktif yang dirancang untuk memberikan pengalaman visual secara langsung. Anda dapat mengeksplorasi dan berinteraksi dengan demo aplikasi di bawah ini.
+    </p>
+  </div>
+
+  <!-- Area Demo Aplikasi -->
+  <div class="card" data-aos="fade-up" style="padding: 0; overflow: hidden; margin-top: 20px;">
+    <!-- Iframe untuk menampilkan aplikasi Vercel -->
+    <iframe 
+      src="https://3dkitchen-mauve.vercel.app/" 
+      width="100%" 
+      height="600px" 
+      style="border: none; display: block;" 
+      allowfullscreen 
+      loading="lazy">
+    </iframe>
+    
+    <!-- Tombol alternatif jika iframe tidak termuat dengan baik di HP -->
+    <div style="padding: 20px; text-align: center; background-color: rgba(0,0,0,0.03); border-top: 1px solid #eee;">
+      <p style="margin-bottom: 15px; font-size: 0.9em; color: #555;">
+        Ingin tampilan yang lebih maksimal?
+      </p>
+      <a href="https://3dkitchen-mauve.vercel.app/" target="_blank" rel="noopener noreferrer" style="display: inline-block; padding: 10px 24px; background-color: #007bff; color: white; text-decoration: none; border-radius: 8px; font-weight: 600;">
+        <i class="fa-solid fa-arrow-up-right-from-square" style="margin-right: 8px;"></i> Buka Layar Penuh
+      </a>
+    </div>
+  </div>
+</section>
+
+    <!-- ============ REFLEKSI SEMESTER 1 ============ -->
+    <section id="refleksi-s1" class="page section">
+      <div class="page-banner gradient-ctg" data-aos="fade-up">
+        <h1>REFLEKSI SEMESTER 1</h1>
+        <p>Refleksi atas kegiatan dan pembelajaran pada semester pertama PPG.</p>
+      </div>
+
+      <div class="section-heading" data-aos="fade-up">
+        <span class="eyebrow-note">lembar refleksi</span>
+        <h2><i class="fa-solid fa-book-open"></i> Refleksi Mata Kuliah Semester 1</h2>
+        <p style="color:var(--text-soft);font-size:.92rem;margin-top:6px;">Model refleksi 4C (Connection, Challenge, Concept, Change) pada setiap mata kuliah.</p>
+      </div>
+
+      <div class="mk-sg" data-aos="fade-up">
+
+        <div class="mk-card">
+          <div class="mk-card-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+          <h3>Filosofi Pendidikan dan Pendidikan Nilai</h3>
+          <p>Mempelajari landasan filosofis pendidikan serta penanaman nilai dalam praktik mengajar.</p>
+          <button class="btn btn-primary lej-more" data-mk="filosofi"><i class="fa-solid fa-eye"></i> Lihat Refleksi dan Unduh File</button>
+        </div>
+
+        <div class="mk-card">
+          <div class="mk-card-icon"><i class="fa-solid fa-users"></i></div>
+          <h3>Pemahaman Peserta Didik dan Pembelajarannya</h3>
+          <p>Memahami karakteristik, kebutuhan, dan potensi peserta didik untuk merancang pembelajaran yang berpihak pada murid.</p>
+          <button class="btn btn-primary lej-more" data-mk="pemahaman"><i class="fa-solid fa-eye"></i> Lihat Refleksi dan Unduh File</button>
+        </div>
+
+        <div class="mk-card">
+          <div class="mk-card-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Pembelajaran Mendalam dan Asesmen Dasar</h3>
+          <p>Menerapkan pembelajaran mendalam serta asesmen awal untuk mendorong pemahaman peserta didik.</p>
+          <button class="btn btn-primary lej-more" data-mk="pembelajaran-dasar"><i class="fa-solid fa-eye"></i> Lihat Refleksi dan Unduh File</button>
+        </div>
+
+        <div class="mk-card">
+          <div class="mk-card-icon"><i class="fa-solid fa-pencil-ruler"></i></div>
+          <h3>Design Thinking</h3>
+          <p>Menerapkan pendekatan design thinking untuk memecahkan masalah pendidikan secara kreatif dan berpusat pada murid.</p>
+          <button class="btn btn-primary lej-more" data-mk="design-thinking"><i class="fa-solid fa-eye"></i> Lihat Refleksi dan Unduh File</button>
+        </div>
+
+        <div class="mk-card">
+          <div class="mk-card-icon"><i class="fa-solid fa-seedling"></i></div>
+          <h3>Pola Pikir Bertumbuh (Growth Mindset)</h3>
+          <p>Mengembangkan pola pikir berkembang dalam konteks pendidikan dan pembelajaran.</p>
+          <button class="btn btn-primary lej-more" data-mk="growth"><i class="fa-solid fa-eye"></i> Lihat Refleksi dan Unduh File</button>
+        </div>
+
+        <div class="mk-card">
+          <div class="mk-card-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+          <h3>Praktik Pengalaman Lapangan Terbimbing</h3>
+          <p>Praktik mengajar terbimbing di sekolah di bawah supervisi guru pamong dan dosen pembimbing.</p>
+          <button class="btn btn-primary lej-more" data-mk="ppl-terbimbing"><i class="fa-solid fa-eye"></i> Lihat Refleksi dan Unduh File</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ REFLEKSI SEMESTER 2 ============ -->
+    <section id="refleksi-s2" class="page section">
+      <div class="page-banner gradient-sage" data-aos="fade-up">
+        <h1>REFLEKSI SEMESTER 2</h1>
+        <p>Refleksi atas kegiatan dan pembelajaran pada semester kedua PPG.</p>
+      </div>
+
+      <div class="section-heading" data-aos="fade-up">
+        <span class="eyebrow-note">lembar refleksi</span>
+        <h2><i class="fa-solid fa-book-open"></i> Refleksi Mata Kuliah Semester 2</h2>
+        <p style="color:var(--text-soft);font-size:.92rem;margin-top:6px;">Model refleksi 4C (Connection, Challenge, Concept, Change) pada setiap mata kuliah.</p>
+      </div>
+
+      <div class="mk-sg" data-aos="fade-up">
+
+        <div class="mk-card">
+          <div class="mk-card-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+          <h3>Pembelajaran Sosial dan Emosional</h3>
+          <p>Mempelajari kompetensi sosial emosional untuk menciptakan lingkungan belajar yang aman, nyaman, dan berpihak pada murid.</p>
+          <button class="btn btn-primary lej-more" data-mk="pse"><i class="fa-solid fa-eye"></i> Lihat Refleksi dan Unduh File</button>
+        </div>
+
+        <div class="mk-card">
+          <div class="mk-card-icon"><i class="fa-solid fa-chart-line"></i></div>
+          <h3>Pembelajaran Mendalam dan Asesmen Lanjut</h3>
+          <p>Mendalami pembelajaran terdiferensiasi serta asesmen lanjutan untuk memberikan umpan balik yang membangun bagi murid.</p>
+          <button class="btn btn-primary lej-more" data-mk="asesmen-lanjut"><i class="fa-solid fa-eye"></i> Lihat Refleksi dan Unduh File</button>
+        </div>
+
+        <div class="mk-card">
+          <div class="mk-card-icon"><i class="fa-solid fa-flag"></i></div>
+          <h3>Proyek Kepemimpinan</h3>
+          <p>Merancang dan melaksanakan proyek kepemimpinan sebagai upaya pengembangan diri dan lingkungan sekolah secara berkelanjutan.</p>
+          <button class="btn btn-primary lej-more" data-mk="kepemimpinan"><i class="fa-solid fa-eye"></i> Lihat Refleksi dan Unduh File</button>
+        </div>
+
+        <div class="mk-card">
+          <div class="mk-card-icon"><i class="fa-solid fa-rocket"></i></div>
+          <h3>Edupreneurship</h3>
+          <p>Menumbuhkan jiwa kewirausahaan, kreativitas, dan kemandirian dalam menciptakan inovasi pembelajaran yang bernilai.</p>
+          <button class="btn btn-primary lej-more" data-mk="edupreneurship"><i class="fa-solid fa-eye"></i> Lihat Refleksi dan Unduh File</button>
+        </div>
+
+        <div class="mk-card">
+          <div class="mk-card-icon"><i class="fa-solid fa-door-open"></i></div>
+          <h3>Praktik Pengalaman Lapangan Mandiri</h3>
+          <p>Menjalankan praktik mengajar secara mandiri dengan menerapkan seluruh pembelajaran untuk menciptakan kelas yang bermakna.</p>
+          <button class="btn btn-primary lej-more" data-mk="ppl-mandiri"><i class="fa-solid fa-eye"></i> Lihat Refleksi dan Unduh File</button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ REFLEKSI DIRI ============ -->
+    <section id="refleksi" class="page section">
+      <div class="page-banner gradient-sage" data-aos="fade-up">
+        <h1>Refleksi PPG</h1>
+        <p>Refleksi mendalam atas pengalaman dan pembelajaran selama menjalani PPG.</p>
+      </div>
+
+<div class="card reflection-card" data-aos="fade-up">
+        <div class="reflection-grid">
+          <div class="reflection-item">
+            <h4><i class="fa-solid fa-star"></i> Apa yang Berhasil</h4>
+            <p>Selama dua semester menjalani PPG, saya berhasil mengubah cara pandang saya sebagai calon guru. Pada semester pertama saya belajar untuk melihat murid sebagai individu yang berbeda-beda, sedangkan pada semester kedua saya belajar bahwa keberhasilan pembelajaran tidak hanya diukur dari kemampuan murid, tetapi juga dari kondisi sosial dan emosionalnya. Melalui PPL dan PPL Mandiri di SMK Negeri 6 Makassar, saya berhasil menerapkan pembelajaran berdiferensiasi, pembelajaran sosial emosional, serta proyek kreasi yang membuat murid lebih aktif, berani mencoba, dan merasa dihargai.</p>
+          </div>
+          <div class="reflection-item">
+            <h4><i class="fa-solid fa-rotate"></i> Apa yang Perlu Diperbaiki</h4>
+            <p>Pengelolaan waktu pada kegiatan inti masih perlu saya strukturnkan agar seluruh tahapan dapat tercapai secara optimal. Selain itu, saya masih cenderung terburu-buru memberikan penilaian ketika peserta didik belum memahami materi. Saya juga perlu meningkatkan kemampuan dalam membaca kebutuhan murid secara individual agar pembelajaran berdiferensiasi dapat diterapkan secara lebih tepat.</p>
+          </div>
+          <div class="reflection-item">
+            <h4><i class="fa-solid fa-heart"></i> Pengalaman Terbaik</h4>
+            <p>Momen ketika peserta didik yang awalnya pasif dan ragu, akhirnya berani maju dan mempresentasikan hasil karyanya di depan kelas. Pada saat itu saya menyadari bahwa kepercayaan diri yang saya bangun melalui dukungan, apresiasi, dan kesempatan yang berulang benar-benar memberi dampak besar bagi murid.</p>
+          </div>
+          <div class="reflection-item">
+            <h4><i class="fa-solid fa-seedling"></i> Rencana Pengembangan Diri</h4>
+            <p>Saya berencana untuk memperdalam kompetensi asesmen digital, Pendidikan Bahasa Indonesia, serta manajemen kelas, sekaligus membiasakan diri melakukan refleksi setelah setiap pertemuan. Saya juga ingin mengikuti pelatihan pembelajaran berbasis proyek agar dapat terus membuat karya yang bermanfaat bagi peserta didik.</p>
+          </div>
+        </div>
+
+        <div style="margin-top:20px;text-align:center;">
+          <button class="btn btn-primary lej-more" data-mk="refleksi-kegiatan" type="button"><i class="fa-solid fa-eye"></i> Lihat Refleksi dan Unduh File</button>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ============ DOKUMENTASI ============ -->
+    <section id="dokumentasi" class="page section">
+      <div class="page-banner" data-aos="fade-up" style="background-image:url('assets/media/banner-dokumentasi.jpg');">
+        <h1>Dokumentasi</h1>
+        <p>Dokumentasi kegiatan selama PPG, dari pembelajaran di kelas hingga praktik mengajar.</p>
+      </div>
+      <div class="card" data-aos="fade-up">
+        <p class="block-text">Bagian ini menampilkan dokumentasi kegiatan selama program PPG, mulai dari pembelajaran di kelas hingga praktik mengajar di sekolah.</p>
+      </div>
+
+      <div class="card gallery-card" data-aos="fade-up">
+        <h3><i class="fa-solid fa-photo-film"></i> Galeri Foto</h3>
+
+        <div class="gallery-grid">
+          <a class="gallery-item" href="assets/galeri/dok-01.jpeg" data-lightbox="galeri" data-alt="Foto dokumentasi 1">
+            <img src="assets/galeri/dok-01.jpeg" alt="Foto dokumentasi 1" loading="lazy">
+          </a>
+          <a class="gallery-item" href="assets/galeri/dok-02.jpeg" data-lightbox="galeri" data-alt="Foto dokumentasi 2">
+            <img src="assets/galeri/dok-02.jpeg" alt="Foto dokumentasi 2" loading="lazy">
+          </a>
+          <a class="gallery-item" href="assets/galeri/dok-03.jpeg" data-lightbox="galeri" data-alt="Foto dokumentasi 3">
+            <img src="assets/galeri/dok-03.jpeg" alt="Foto dokumentasi 3" loading="lazy">
+          </a>
+          <a class="gallery-item" href="assets/galeri/dok-04.jpeg" data-lightbox="galeri" data-alt="Foto dokumentasi 4">
+            <img src="assets/galeri/dok-04.jpeg" alt="Foto dokumentasi 4" loading="lazy">
+          </a>
+          <a class="gallery-item" href="assets/galeri/dok-05.jpeg" data-lightbox="galeri" data-alt="Foto dokumentasi 5">
+            <img src="assets/galeri/dok-05.jpeg" alt="Foto dokumentasi 5" loading="lazy">
+          </a>
+          <a class="gallery-item" href="assets/galeri/dok-06.jpeg" data-lightbox="galeri" data-alt="Foto dokumentasi 6">
+            <img src="assets/galeri/dok-06.jpeg" alt="Foto dokumentasi 6" loading="lazy">
+          </a>
+          <a class="gallery-item" href="assets/galeri/dok-07.jpeg" data-lightbox="galeri" data-alt="Foto dokumentasi 7">
+            <img src="assets/galeri/dok-07.jpeg" alt="Foto dokumentasi 7" loading="lazy">
+          </a>
+          <a class="gallery-item" href="assets/galeri/dok-08.jpeg" data-lightbox="galeri" data-alt="Foto dokumentasi 8">
+            <img src="assets/galeri/dok-08.jpeg" alt="Foto dokumentasi 8" loading="lazy">
+          </a>
+          <a class="gallery-item" href="assets/galeri/dok-09.jpeg" data-lightbox="galeri" data-alt="Foto dokumentasi 9">
+            <img src="assets/galeri/dok-09.jpeg" alt="Foto dokumentasi 9" loading="lazy">
+          </a>
+          <a class="gallery-item" href="assets/galeri/dok-10.jpeg" data-lightbox="galeri" data-alt="Foto dokumentasi 10">
+            <img src="assets/galeri/dok-10.jpeg" alt="Foto dokumentasi 10" loading="lazy">
+          </a>
+          <a class="gallery-item" href="assets/galeri/dok-11.jpeg" data-lightbox="galeri" data-alt="Foto dokumentasi 11">
+            <img src="assets/galeri/dok-11.jpeg" alt="Foto dokumentasi 11" loading="lazy">
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="site-footer">
+    <p style="color:var(--text-soft);font-size:.8rem;line-height:2;margin-top:10px;">
+      <a href="mailto:nasriani.arifin2452@gmail.com" style="color:inherit;text-decoration:none;"><i class="fa-solid fa-envelope"></i> nasriani.arifin2452@gmail.com</a><br>
+      <a href="https://wa.me/6282358888074" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;"><i class="fa-brands fa-whatsapp"></i> WA: 0823 5888 8074</a> &nbsp;&bull;&nbsp;
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Bumi+Palanga+Mas+Blok+E65" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;"><i class="fa-solid fa-location-dot"></i> Alamat: Btn. Palanga Mas Blok E65</a>
+    </p>
+    <div class="marquee"><span>&ldquo;Jadilah guru yang selalu ingin belajar, karena guru yang baik adalah ia yang tak pernah berhenti memperbaiki diri.&rdquo;</span></div>
+  </footer>
+</div>
+
+<!-- ================= FLOATING BUTTONS ================= -->
+<div class="fab-group">
+  <button class="fab fab-help" id="fabHelp" title="Bantuan">
+    <i class="fa-solid fa-comment-dots"></i>
+  </button>
+  <button class="fab fab-top" id="fabTop" title="Kembali ke atas">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+</div>
+
+<!-- ================= MODAL ================= -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box lej-modal">
+    <button class="modal-close" id="modalClose"><i class="fa-solid fa-xmark"></i></button>
+    <div class="modal-icon"><i class="fa-solid fa-book-open"></i></div>
+    <h3 class="modal-title" id="modalTitle"></h3>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
+
+
