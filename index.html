@@ -553,8 +553,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
 <script src="js/script.js"></script>
-  <script>
-  // 1. Memuat YouTube IFrame API secara asinkron
+ <script>
   var tag = document.createElement('script');
   tag.src = "https://www.youtube.com/iframe_api";
   var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -563,25 +562,26 @@
   var player1, player2;
   var readyPlayers = 0;
 
-  // 2. Fungsi ini otomatis dipanggil saat API YouTube selesai dimuat
   function onYouTubeIframeAPIReady() {
+    // Pengaturan Video 1
     player1 = new YT.Player('youtube-player-1', {
-      height: '315', // Sesuaikan tinggi
-      width: '100%', // Sesuaikan lebar
-      videoId: 'ID_VIDEO_YOUTUBE_1', // GANTI DENGAN ID VIDEO 1
+      height: '315', 
+      width: '100%', 
+      videoId: 'Zp3R85i6Ovo', // ID dari video pertama Anda
       playerVars: {
         'playsinline': 1,
-        'mute': 1 // Wajib 1 (mute) agar bisa autoplay di browser modern
+        'mute': 1 // Wajib 1 (mute) agar bisa autoplay di browser
       },
       events: {
         'onReady': onPlayerReady
       }
     });
 
+    // Pengaturan Video 2
     player2 = new YT.Player('youtube-player-2', {
       height: '315',
       width: '100%',
-      videoId: 'ID_VIDEO_YOUTUBE_2', // GANTI DENGAN ID VIDEO 2
+      videoId: 'w7GY-ihMaPk', // ID dari video kedua Anda
       playerVars: {
         'playsinline': 1,
         'mute': 1 
@@ -592,38 +592,32 @@
     });
   }
 
-  // 3. Cek apakah video sudah siap
   function onPlayerReady(event) {
     readyPlayers++;
-    // Jika kedua video sudah siap, jalankan fungsi pendeteksi scroll (Observer)
     if (readyPlayers === 2) {
       setupIntersectionObserver();
     }
   }
 
-  // 4. Fungsi untuk mendeteksi scroll layar (Intersection Observer)
   function setupIntersectionObserver() {
     var options = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.5 // Video ter-trigger play jika 50% bagiannya terlihat di layar
+      threshold: 0.5 
     };
 
     var observer = new IntersectionObserver(function(entries, observer) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
-          // Jika elemen masuk ke layar, putar video
           if (entry.target.id === 'slot-video-1') player1.playVideo();
           if (entry.target.id === 'slot-video-2') player2.playVideo();
         } else {
-          // Jika elemen keluar dari layar, jeda (pause) video
           if (entry.target.id === 'slot-video-1') player1.pauseVideo();
           if (entry.target.id === 'slot-video-2') player2.pauseVideo();
         }
       });
     }, options);
 
-    // Mulai memantau elemen slot video
     observer.observe(document.getElementById('slot-video-1'));
     observer.observe(document.getElementById('slot-video-2'));
   }
