@@ -590,6 +590,32 @@ ul{list-style:none;}
 .two-col .timeline-content{margin-bottom:0;}
 .two-col .timeline .timeline-item:last-child{margin-bottom:0;}
 
+/* =============== KARYA INOVASI: IDENTITAS & PENJELASAN =============== */
+.ki p{color:var(--text-soft);line-height:1.7;font-size:.92rem;text-align:justify;margin-top:12px;}
+.ki .block-title + p,
+.ki .ki-sub + p,
+.ki .analysis-item h4 + p{margin-top:0;}
+.ki .block-title{font-size:1.1rem;margin-bottom:12px;}
+.ki .ki-sub{font-size:.95rem;font-weight:700;color:var(--secondary);margin:22px 0 8px;}
+.ki ol{padding-left:20px;display:flex;flex-direction:column;gap:8px;margin-top:12px;}
+.ki li{font-size:.9rem;color:var(--text-soft);line-height:1.65;text-align:justify;}
+.ki li strong{color:var(--primary-dark);}
+[data-theme="dark"] .ki li strong{color:var(--primary-light);}
+.ki .analysis-item h4{font-size:.98rem;color:var(--primary-dark);}
+[data-theme="dark"] .ki .analysis-item h4{color:var(--primary-light);}
+.ki .analysis-item h4 i{color:var(--primary);}
+.ki .analysis-item p{font-size:.88rem;}
+.ki .detail-row dd{font-weight:500;line-height:1.55;}
+.ki-stat{display:block;font-size:1.6rem;font-weight:800;color:var(--primary);margin-bottom:2px;}
+.ki .stats-row{margin-top:26px;}
+@media (max-width:640px){.ki .stats-row{grid-template-columns:repeat(2,1fr);}}
+.ki-link{color:var(--primary);font-weight:600;word-break:break-all;}
+.ki-link:hover{text-decoration:underline;}
+@media (max-width:640px){
+  .ki .detail-row{flex-direction:column;gap:4px;}
+  .ki .detail-row dt{width:auto;}
+}
+
 /* =============== MEDIA GRID =============== */
 .media-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
 .media-card{margin-bottom:0;text-align:left;}
@@ -770,6 +796,74 @@ ul{list-style:none;}
 [data-theme="dark"] .reflection-item h4{color:var(--primary-light);}
 .reflection-item p{color:var(--text-soft);font-size:.9rem;line-height:1.7;}
 
+/* =============== REFLEKSI PPG: LK 3 & RTL =============== */
+.ppg-card{position:relative;overflow:hidden;padding-left:40px;}
+.ppg-card::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:6px;
+  background:linear-gradient(180deg, var(--primary), var(--primary-light));
+}
+.ppg-card .eyebrow-note{font-family:var(--font-hand);color:var(--secondary);font-size:1.3rem;font-weight:600;}
+.ppg-title{display:flex;align-items:center;gap:12px;font-size:1.4rem;font-weight:700;line-height:1.3;margin:2px 0 6px;}
+.ppg-title i{color:var(--primary);}
+.ppg-sub{color:var(--text-soft);font-size:.9rem;line-height:1.6;margin-bottom:22px;}
+.ppg-q{display:flex;align-items:center;gap:8px;font-weight:600;font-size:.95rem;color:var(--primary-dark);margin-bottom:10px;}
+.ppg-q i{color:var(--primary);}
+[data-theme="dark"] .ppg-q{color:var(--primary-light);}
+.ppg-excerpt{
+  position:relative;padding:20px 24px 20px 54px;border-radius:var(--radius-sm);
+  background:linear-gradient(135deg, rgba(11,107,58,.08), rgba(111,175,143,.06));
+  border:1px dashed var(--primary-light);
+}
+.ppg-excerpt > i{position:absolute;left:22px;top:22px;color:var(--primary);opacity:.6;font-size:1.2rem;}
+.ppg-excerpt p{margin:0;color:var(--text-soft);font-size:.95rem;line-height:1.85;text-align:justify;font-style:italic;}
+.ppg-actions{display:flex;flex-wrap:wrap;align-items:center;gap:16px;margin-top:22px;}
+.ppg-file{display:inline-flex;align-items:center;gap:8px;color:var(--text-soft);font-size:.85rem;}
+.ppg-file i{color:#d0555f;}
+
+.rtl-q{display:flex;gap:12px;align-items:flex-start;font-size:1.02rem;font-weight:600;line-height:1.5;margin:6px 0 10px;color:var(--primary-dark);}
+[data-theme="dark"] .rtl-q{color:var(--primary-light);}
+.rtl-no, .rtl-item h5 span{
+  flex:none;display:inline-flex;align-items:center;justify-content:center;
+  width:26px;height:26px;border-radius:50%;background:var(--primary);color:#fff;
+  font-size:.8rem;font-weight:700;text-transform:uppercase;
+}
+.rtl-p{color:var(--text-soft);font-size:.9rem;line-height:1.8;text-align:justify;}
+.rtl-item{
+  margin-top:14px;padding:18px 20px;border:1px solid var(--border);border-radius:var(--radius-sm);
+  background:linear-gradient(180deg, rgba(11,107,58,.05), transparent);
+}
+.rtl-item h5{display:flex;gap:10px;align-items:flex-start;font-size:.95rem;font-weight:600;line-height:1.5;margin-bottom:10px;color:var(--primary-dark);}
+[data-theme="dark"] .rtl-item h5{color:var(--primary-light);}
+.rtl-item h5 span{width:24px;height:24px;font-size:.78rem;margin-top:1px;}
+.rtl-item p{color:var(--text-soft);font-size:.9rem;line-height:1.8;text-align:justify;}
+@media (max-width:640px){
+  .ppg-card{padding-left:26px;}
+  .ppg-title{font-size:1.15rem;align-items:flex-start;}
+  .ppg-excerpt{padding:18px 16px 18px 40px;}
+  .ppg-excerpt > i{left:14px;top:18px;}
+  .ppg-excerpt p, .rtl-p, .rtl-item p{text-align:left;}
+}
+
+/* =============== DOKUMENTASI: DOKUMEN LEMBAR KERJA =============== */
+.dok-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:20px;margin-top:18px;}
+.dok-doc{position:relative;padding:22px 22px 20px;border:1px solid var(--border);border-radius:var(--radius-sm);
+  background:linear-gradient(180deg, rgba(11,107,58,.05), transparent);display:flex;flex-direction:column;transition:transform .25s, box-shadow .25s;}
+.dok-doc:hover{transform:translateY(-3px);box-shadow:0 10px 26px rgba(11,107,58,.12);}
+.dok-doc .eyebrow-note{font-family:var(--font-hand);color:var(--secondary);font-size:1.2rem;font-weight:600;}
+.dok-no{position:absolute;top:16px;right:18px;width:28px;height:28px;border-radius:50%;background:var(--primary);color:#fff;
+  display:inline-flex;align-items:center;justify-content:center;font-size:.8rem;font-weight:700;}
+.dok-title{display:flex;align-items:flex-start;gap:10px;font-size:1.08rem;font-weight:700;line-height:1.35;margin:2px 36px 14px 0;}
+.dok-title i{color:var(--primary);margin-top:3px;}
+.dok-doc .ppg-excerpt{flex:1;padding:16px 18px 16px 44px;}
+.dok-doc .ppg-excerpt > i{left:16px;top:18px;}
+.dok-doc .ppg-excerpt p{font-size:.88rem;line-height:1.75;text-align:left;}
+.dok-doc .ppg-actions{margin-top:16px;gap:10px 14px;}
+.dok-doc .ppg-file{font-size:.78rem;word-break:break-word;}
+@media (max-width:640px){
+  .dok-grid{grid-template-columns:1fr;}
+  .dok-doc .ppg-excerpt p{text-align:left;}
+}
+
 /* =============== TENTANG SAYA QUOTE =============== */
 .quote-card{
   margin-top:18px;padding:18px 22px;text-align:center;
@@ -798,8 +892,6 @@ ul{list-style:none;}
 .marquee span:hover{animation-play-state:paused;}
 @keyframes marquee{0%{transform:translateX(0);}100%{transform:translateX(-100%);}}
 
-#artefak .card, #artefak .media-card{background:linear-gradient(135deg,#edf6ef 0%,#fdf8e6 100%);border-color:#e0eccb;}
-[data-theme="dark"] #artefak .card, [data-theme="dark"] #artefak .media-card{background:linear-gradient(135deg,#143527 0%,#3d3518 100%);border-color:#2c4a33;}
 
 /* =============== FLOATING BUTTONS =============== */
 .fab-group{position:fixed;right:26px;bottom:26px;display:flex;flex-direction:column;gap:14px;z-index:800;}

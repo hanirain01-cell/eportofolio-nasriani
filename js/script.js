@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   /* ---------- PAGE SWITCHING (menu navigation, no scroll) ---------- */
-  const PAGE_IDS = ['beranda', 'profil', 'rancangan', 'pengalaman-s1', 'pengalaman-s2', 'karya-inovatif', 'refleksi-s1', 'refleksi-s2', 'refleksi', 'artefak', 'dokumentasi'];
+  const PAGE_IDS = ['beranda', 'profil', 'rancangan', 'pengalaman-s1', 'pengalaman-s2', 'karya-inovatif', 'refleksi-s1', 'refleksi-s2', 'refleksi', 'dokumentasi'];
 
   /* ---------- NAV DROPDOWNS ---------- */
   const navDropdowns = Array.from(document.querySelectorAll('.nav-dropdown'));
@@ -710,12 +710,13 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.mgj-toggle').forEach(function (btn) {
     const more = document.getElementById(btn.getAttribute('data-target'));
     if (!more) return;
+    const closedLabel = btn.innerHTML;
     btn.addEventListener('click', function () {
       const isHidden = more.style.display === 'none';
       more.style.display = isHidden ? 'block' : 'none';
       btn.innerHTML = isHidden
         ? '<i class="fa-solid fa-chevron-up"></i> Tutup'
-        : '<i class="fa-solid fa-chevron-down"></i> Baca Lebih Lengkap';
+        : closedLabel;
     });
   });
 
